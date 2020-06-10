@@ -620,5 +620,4 @@ Partial Class frmPatologia
     Friend WithEvents lblUrgencia As Label
     Friend WithEvents lblEmergencia As Label
     Friend WithEvents Label1 As Label
- master
 End Class
