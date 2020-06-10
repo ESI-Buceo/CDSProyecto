@@ -11,6 +11,7 @@ Public Class ModeloPatologia
 
     Public Function GuaradrPatologia() As Boolean
         ' guarda nueva patologia
+
         Return True
     End Function
 
