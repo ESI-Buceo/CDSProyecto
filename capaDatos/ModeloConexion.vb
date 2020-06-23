@@ -1,5 +1,5 @@
 ﻿Imports System.Data.Odbc
-Public Class ModeloConexion
+Public MustInherit Class ModeloConexion
 
     Public Driver As String = "MySQL ODBC 5.3 ANSI Driver"
     Public Uid As String = "u876920732_proyectocds"
@@ -17,7 +17,7 @@ Public Class ModeloConexion
     Public Comando As New OdbcCommand
     Public Reader As OdbcDataReader
 
-    Public Sub conectar()
+    Public Sub New()
         Me.Conexion.Open()
         Me.Comando.Connection = Me.Conexion
     End Sub

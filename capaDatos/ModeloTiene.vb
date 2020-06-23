@@ -1,16 +1,15 @@
 ﻿Imports System.Data.Odbc
 
 Public Class ModeloTiene
+    Inherits ModeloConexion
 
     Public IdDiagnostico As String
     Public IdPatologia As String
 
     Public Function GuardarRelacionDiagnosticoPatologia()
-        Dim c As New ModeloConexion
-        c.conectar()
-        c.Comando.CommandText = "INSERT INTO tiene VALUES(" & Me.IdDiagnostico & ", " & Me.IdPatologia & ")"
-        c.Comando.ExecuteNonQuery()
-        c.CerrarConexion()
+        Comando.CommandText = "INSERT INTO tiene VALUES(" & Me.IdDiagnostico & ", " & Me.IdPatologia & ")"
+        Comando.ExecuteNonQuery()
+        CerrarConexion()
         Return True
     End Function
 End Class
